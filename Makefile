@@ -1,4 +1,4 @@
-.PHONY: var node amd clean test web dependencies
+.PHONY: var node amd clean test web pages dependencies
 
 # repository name
 REPO = main
@@ -46,6 +46,23 @@ test:
 # launch polpetta (ctrl+click to open the page)
 web:
 	node node_modules/polpetta/build/polpetta ./
+
+pages:
+	make var
+	mkdir -p ~/tmp
+	mkdir -p ~/tmp/$(REPO)
+	cp -rf build ~/tmp/$(REPO)
+	cp -rf test ~/tmp/$(REPO)
+	cp index.html ~/tmp/$(REPO)
+	git checkout gh-pages
+	mkdir -p test
+	rm -rf test
+	cp -rf ~/tmp/$(REPO) test
+	git add .
+	git commit -m 'automatic test generator'
+	git push
+	git checkout master
+	rm -r ~/tmp/$(REPO)
 
 # modules used in this repo
 dependencies:
