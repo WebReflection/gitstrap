@@ -2,12 +2,10 @@ language: node_js
 node_js:
   - 0.6
   - 0.9
-env:
-  - TEST_COMMAND="node ./node_modules/wru/node/program.js ./test/main.js"
 git:
   depth: 1
 branches:
   only:
     - master
 script:
-  $TEST_COMMAND
+  "node ./node_modules/wru/node/program.js ./test/main.js"
