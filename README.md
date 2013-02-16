@@ -1,6 +1,8 @@
 gitstrap
 ========
 
+[![build status](https://secure.travis-ci.org/WebReflection/gitstrap.png)](http://travis-ci.org/WebReflection/gitstrap)
+
 A basic structure to start a JS project
 
     # install dependencies
