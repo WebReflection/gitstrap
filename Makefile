@@ -55,7 +55,7 @@ clean:
 
 # tests, as usual and of course
 test:
-	node node_modules/wru/node/program.js test/$(REPO).js
+	node test/.test.js
 
 # launch polpetta (ctrl+click to open the page)
 web:
