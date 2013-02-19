@@ -1,4 +1,4 @@
-.PHONY: var node amd clean test web pages dependencies
+.PHONY: var node amd hint clean test web pages dependencies
 
 # repository name
 REPO = main
@@ -9,6 +9,7 @@ build:
 	make node
 	make amd
 	make test
+#	make hint
 
 # build generic version
 var:
@@ -34,6 +35,10 @@ amd:
 	cat template/copyright build/no-copy.$(REPO).amd.js >build/$(REPO).amd.js
 	rm build/no-copy.$(REPO).max.amd.js
 	rm build/no-copy.$(REPO).amd.js
+
+# hint built file
+hint:
+	node node_modules/jshint/bin/hint build/main.max.js
 
 # clean/remove build folder
 clean:
@@ -71,3 +76,6 @@ dependencies:
 	npm install wru
 	npm install polpetta
 	npm install uglify-js@1
+	npm install uglify-js@1
+
+
