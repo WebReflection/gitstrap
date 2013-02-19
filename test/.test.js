@@ -19,7 +19,7 @@ fs.readdirSync(__dirname).filter(function(file){
   if (fs.existsSync(path.join(__dirname, '..', 'src', file))) {
     ++many;
     spawn(
-      'node', [modules, path.join('.', __dirname.replace(/^.*([\/])([^\1]+?)$/, "$2"), file)], {
+      'node', [modules, path.join('test', file)], {
       detached: false,
       stdio: [process.stdin, process.stdout, process.stderr]
     }).on('exit', exit);
