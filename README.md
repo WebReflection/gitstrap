@@ -29,6 +29,9 @@ The idea behind is to have it somewhere updated locally, then when it's time to 
     # test only
     make test
     
+    # via npm
+    npm test
+    
     # test via web (click on the generated url)
     make web
 
