@@ -31,6 +31,11 @@ The idea behind is to have it somewhere updated locally, then when it's time to 
     
     # test via web (click on the generated url)
     make web
+
+----------------------------------------
+
+    # jshint
+    make test
     
     # update pages test
     make pages
