@@ -55,7 +55,7 @@ clean:
 
 # tests, as usual and of course
 test:
-	node test/.test.js
+	npm test
 
 # launch polpetta (ctrl+click to open the page)
 web:
