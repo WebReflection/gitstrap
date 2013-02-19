@@ -7,5 +7,3 @@ git:
 branches:
   only:
     - master
-script:
-  "node ./node_modules/wru/node/program.js ./test/main.js"
