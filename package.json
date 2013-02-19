@@ -12,5 +12,8 @@
     "type": "git",
     "url": "git://github.com/WebReflection/main.git"
   },
-  "main": "./build/main.node.js"
+  "main": "./build/main.node.js",
+  "scripts": {
+    "test": "node test/.test.js"
+  }
 }
