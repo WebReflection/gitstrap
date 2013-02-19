@@ -76,6 +76,6 @@ dependencies:
 	npm install wru
 	npm install polpetta
 	npm install uglify-js@1
-	npm install uglify-js@1
+	npm install jshint
 
 
