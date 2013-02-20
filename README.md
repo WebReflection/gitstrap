@@ -17,7 +17,7 @@ Once created a repository **without the README.md** file, and let's call the rep
     git init
     git add .
     git commit -m "gitstrap in"
-    git remote add origin git@github.com:WebReflection/project-name.git
+    git remote add origin git@github.com:yourname/project-name.git
     git push -u origin master
 
 ### Other Features
