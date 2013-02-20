@@ -3,10 +3,10 @@
   "name": "main",
   "description": "",
   "homepage": "https://github.com/WebReflection/main",
-  "keywords": ["node", "JS", "web", "development", "github"],
+  "keywords": [],
   "author": {
-    "name": "Andrea Giammarchi",
-    "web": "http://webreflection.blogspot.com/"
+    "name": "",
+    "web": ""
   },
   "repository": {
     "type": "git",

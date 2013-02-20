@@ -47,7 +47,7 @@ amd:
 
 # hint built file
 hint:
-	node node_modules/jshint/bin/hint build/main.max.js
+	node node_modules/jshint/bin/hint build/$(REPO).max.js
 
 # clean/remove build folder
 clean:
