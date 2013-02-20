@@ -66,6 +66,7 @@ pages:
 	mkdir -p ~/tmp
 	mkdir -p ~/tmp/$(REPO)
 	cp -rf src ~/tmp/$(REPO)
+	cp -rf build/* ~/tmp/$(REPO)/src/
 	cp -rf test ~/tmp/$(REPO)
 	cp index.html ~/tmp/$(REPO)
 	git checkout gh-pages
