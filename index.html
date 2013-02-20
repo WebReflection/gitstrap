@@ -38,7 +38,47 @@
         <article class="markdown-body">
           <h1>gitstrap</h1>
 
-<p>A basic structure to start a JS project</p>
+<p><a href="http://travis-ci.org/WebReflection/gitstrap"><img src="https://secure.travis-ci.org/WebReflection/gitstrap.png" alt="build status"></a></p>
+
+<p>A basic structure to start a JS project.</p>
+
+<p>The idea behind is to have it somewhere updated locally, then when it's time to create a new repo simply <code>cp -rf ~/code/gitstrap/* ~/code/newrepo</code> and then start creating amazing stuff with a folder already set up to build and easily test stuff.</p>
+
+<pre><code># install dependencies
+make dependencies
+</code></pre>
+
+<hr><pre><code># generic JS variable
+make var
+
+# node.js
+make node
+
+# AMD module
+make amd
+
+# all together plus tests via node.js
+make
+</code></pre>
+
+<hr><pre><code># test only
+make test
+
+# via npm
+npm test
+
+# test via web (click on the generated url)
+make web
+</code></pre>
+
+<hr><pre><code># jshint
+make test
+
+# update pages test
+make pages
+</code></pre>
+
+<p>Latter one requires a <code>gh-pages</code> branch</p>
         </article>
       </div>
     </div>
