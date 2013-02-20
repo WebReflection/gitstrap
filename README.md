@@ -5,9 +5,14 @@ gitstrap
 
 A basic structure to start a JS project.
 
-The idea behind is to have it somewhere updated locally, then when it's time to create a new repo simply `cp -rf ~/code/gitstrap/* ~/code/newrepo` and then start creating amazing stuff with a folder already set up to build and easily test stuff.
+### Automatic Setup
+This procedure will ask you your name in github, in my case I would put `WebReflection`, the new repository name you have just created, in this case I would use `gitstrap`, and the folder where to initialize such repository, as example `~/code`.
 
-### Basic Setup
+    curl -s https://raw.github.com/WebReflection/gitstrap/master/new > ~/gitstrap.sh && bash ~/gitstrap.sh && rm ~/gitstrap.sh
+
+Once inserted those three values, the script will prepare everything and will ask if you want to push the fresh new repo content.
+
+### Basic Manual Setup
 Once created a repository **without the README.md** file, and let's call the repository *project-name*, here what you could do to be up and running:
 
     git clone git://github.com/WebReflection/gitstrap.git project-name
