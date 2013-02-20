@@ -58,4 +58,4 @@ Once created a repository **without the README.md** file, and let's call the rep
     # update pages test
     make pages
 
-Latter one requires a [gh-pages branch](http://webreflection.github.com/gitstrap/) so the test will be reachable, as example, [through this page](http://webreflection.github.com/gitstrap/test/)
+Latter one requires a [gh-pages branch](http://webreflection.github.com/gitstrap/) so the test will be reachable, as example, [through the test folder](http://webreflection.github.com/gitstrap/test/)
