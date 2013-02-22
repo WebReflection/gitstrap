@@ -47,7 +47,7 @@ amd:
 	rm build/no-copy.$(REPO).amd.js
 
 size:
-	gzip -c build/$(REPO).max.js | wc -c
+	wc -c build/$(REPO).max.js
 	gzip -c build/$(REPO).js | wc -c
 
 # hint built file
