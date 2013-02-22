@@ -1,4 +1,4 @@
-.PHONY: var node amd hint clean test web pages dependencies
+.PHONY: var node amd size hint clean test web pages dependencies
 
 # repository name
 REPO = main
@@ -19,6 +19,7 @@ build:
 	make amd
 	make test
 #	make hint
+	make size
 
 # build generic version
 var:
@@ -44,6 +45,10 @@ amd:
 	cat template/copyright build/no-copy.$(REPO).amd.js >build/$(REPO).amd.js
 	rm build/no-copy.$(REPO).max.amd.js
 	rm build/no-copy.$(REPO).amd.js
+
+size:
+	gzip -c build/$(REPO).max.js | wc -c
+	gzip -c build/$(REPO).js | wc -c
 
 # hint built file
 hint:

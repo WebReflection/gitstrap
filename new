@@ -19,6 +19,8 @@ INDEX=`cat index.html`
 echo "${INDEX/TESTS = [\"main\"]/TESTS = [\"${repo}\"]}" >index.html
 LICENSE=`cat LICENSE.txt`
 echo "${LICENSE/WebReflection/${name}}" >LICENSE.txt
+COPYRIGHT=`cat template/copyright`
+echo "${COPYRIGHT/WebReflection/${name}}" >template/copyright
 REPO_NAME_LENGTH=$(printf "%${#repo}s")
 echo "${repo}
 ${REPO_NAME_LENGTH// /=}
