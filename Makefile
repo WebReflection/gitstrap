@@ -1,4 +1,4 @@
-.PHONY: var node amd size hint clean test web pages dependencies
+.PHONY: var node amd size hint clean test web preview pages dependencies
 
 # repository name
 REPO = main
@@ -11,6 +11,9 @@ NODE = $(VAR)
 
 # make amd files
 AMD = $(VAR)
+
+# README constant
+
 
 # default build task
 build:
@@ -66,6 +69,14 @@ test:
 web:
 	node node_modules/polpetta/build/polpetta ./
 
+# markdown the readme and view it
+preview:
+	node_modules/markdown/bin/md2html.js README.md >README.md.htm
+	cat template/md.before README.md.htm template/md.after >README.md.html
+	open README.md.html
+	sleep 3
+	rm README.md.htm README.md.html
+
 pages:
 	make var
 	mkdir -p ~/tmp
@@ -92,5 +103,6 @@ dependencies:
 	npm install polpetta
 	npm install uglify-js@1
 	npm install jshint
+	npm install markdown
 
 
