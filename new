@@ -5,10 +5,16 @@ echo 'new repo name'
 read repo
 echo 'destination folder'
 read dest
-cd "${dest//'~'/$HOME}"
+if [ "$dest" = "" ]
+then
+  cd "$HOME"
+else
+  cd "${dest//'~'/$HOME}"
+fi
 git clone "git://github.com/WebReflection/gitstrap.git" "$repo"
 cd "$repo"
 rm -rf .git
+rm new
 MAKEFILE=`cat Makefile`
 echo "${MAKEFILE/REPO = main/REPO = ${repo}}" >Makefile
 PACKAGE=`cat package.json`
