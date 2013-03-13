@@ -1,4 +1,4 @@
-.PHONY: var node amd size hint clean test web preview pages dependencies
+.PHONY: build var node amd size hint clean test web preview pages dependencies
 
 # repository name
 REPO = main
@@ -17,7 +17,6 @@ AMD = $(VAR)
 
 # default build task
 build:
-	make clean
 	make var
 	make node
 	make amd
