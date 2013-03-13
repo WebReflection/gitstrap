@@ -17,6 +17,7 @@ AMD = $(VAR)
 
 # default build task
 build:
+	make clean
 	make var
 	make node
 	make amd
