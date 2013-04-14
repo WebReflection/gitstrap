@@ -106,6 +106,6 @@ dependencies:
 	npm install polpetta
 	npm install uglify-js@1
 	npm install jshint
-	npm install tinydown
+	npm install markdown
 
 
