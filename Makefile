@@ -1,4 +1,4 @@
-.PHONY: build var node amd size hint clean test web preview pages dependencies
+.PHONY: build duk var node amd size hint clean test web preview pages dependencies
 
 # repository name
 REPO = main
@@ -49,6 +49,19 @@ amd:
 	cat template/copyright build/no-copy.$(REPO).amd.js >build/$(REPO).amd.js
 	rm build/no-copy.$(REPO).max.amd.js
 	rm build/no-copy.$(REPO).amd.js
+
+# build self executable for duktape
+duk:
+	node -e 'var fs=require("fs");\
+          fs.writeFileSync(\
+            "test/duk.js",\
+            fs.readFileSync("node_modules/wru/build/wru.console.js") +\
+            "\n" +\
+            fs.readFileSync("build/$(REPO).js") +\
+            "\n" +\
+            fs.readFileSync("test/$(REPO).js").toString().replace(/^[^\x00]+?\/\/:remove\s*/,"")\
+          );'
+
 
 size:
 	wc -c build/$(REPO).max.js
