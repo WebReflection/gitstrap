@@ -8,7 +8,7 @@ A basic structure to start a JS project.
 ### Automatic Setup
 This procedure will ask you your name in github, in my case I would put `WebReflection`, the new repository name you have just created, in this case I would use `gitstrap`, and the folder where to initialize such repository, as example `~/code`.
 
-    curl -s https://raw.github.com/WebReflection/gitstrap/master/new >~/gitstrap && bash ~/gitstrap && rm ~/gitstrap
+    curl -s https://github.com/WebReflection/gitstrap/raw/master/new >~/gitstrap && bash ~/gitstrap && rm ~/gitstrap
 
 Once inserted those three values, the script will prepare everything and will ask if you want to push the fresh new repo content.
 
