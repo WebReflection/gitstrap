@@ -6,8 +6,8 @@
   "homepage": "https://github.com/WebReflection/main",
   "keywords": [],
   "author": {
-    "name": "",
-    "web": ""
+    "name": "Andrea Giammarchi",
+    "web": "http://webreflection.blogspot.com/"
   },
   "repository": {
     "type": "git",
@@ -15,9 +15,17 @@
   },
   "main": "./build/main.node.js",
   "scripts": {
-    "test": "node test/.test.js"
+    "test": "node test/.test.js",
+    "test": "phantomjs testrunner.js",
+    "web": "IP=0.0.0.0 node node_modules/polpetta"
   },
-  "dependencies": {
-    "wru": ">= 0.0.0"
+  "devDependencies": {
+    "wru": "~0.2.x",
+    "uglify-js": "1.x",
+    "jshint": "~2.x",
+    "polpetta": "~0.3.x",
+    "phantomjs": "~1.x",
+    "browserify": "~0.0.0",
+    "watchify": "~0.0.0"
   }
 }

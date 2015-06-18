@@ -123,5 +123,23 @@ dependencies:
 	npm install uglify-js@1
 	npm install jshint
 	npm install markdown
+	npm install browserify
+	npm install watchify
 
+# bundle: creates the browserified version of the project as js/bundle.max.js
+bundle:
+	sh utils/browserify.sh
 
+# watch: update the browserified version of the project as soon as file changes
+watch:
+	sh utils/watchify.sh
+
+# minified: create the minifeid version of the project as js/bundle.js
+minified:
+	make -s bundle
+	sh utils/uglifyjs.sh $(LICENSE)
+	make -s size
+
+# jshint: recursively checks for javascript files inside the src folder and lint them
+jshint:
+	sh utils/jshint.sh

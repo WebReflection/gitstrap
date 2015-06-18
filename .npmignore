@@ -1,7 +1,10 @@
 src/*
 test/*
 template/*
+utils/*
 node_modules/*
 build/*.amd.js
 Makefile
 index.html
+.travis.yml
+testrunner.js
