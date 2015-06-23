@@ -22,7 +22,7 @@ PACKAGE_NOMAIN="${PACKAGE//main/${repo}}"
 PACKAGE_MAINBIN="${PACKAGE_NOMAIN/\"${repo}\":/\"main\":}"
 echo "${PACKAGE_MAINBIN//WebReflection/${name}}" >package.json
 INDEX=`cat index.html`
-echo "${INDEX/TESTS = [\"main\"]/TESTS = [\"${repo}\"]}" >index.html
+echo "${INDEX/TESTS = ['main']/TESTS = ['${repo}']}" >index.html
 LICENSE=`cat LICENSE.txt`
 echo "${LICENSE/WebReflection/${name}}" >LICENSE.txt
 COPYRIGHT=`cat template/copyright`
