@@ -93,6 +93,9 @@ preview:
 
 pages:
 	git pull --rebase
+	git checkout gh-pages
+	git pull --rebase
+	git checkout master
 	make var
 	mkdir -p ~/tmp
 	mkdir -p ~/tmp/$(REPO)
