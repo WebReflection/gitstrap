@@ -20,14 +20,14 @@
     "install-global-dev": "node -e '(function(o){for(var k in o)require(\"child_process\").spawn(\"npm\",[\"install\",\"-g\",k+\"@\"+o[k]]).on(\"exit\",console.log.bind(console,k+\"@\"+o[k]));}(require(\"package.json\").globalDevDependencies))'"
   },
   "globalDevDependencies": {
-    "uglify-js": "1.x",
-    "jshint": "~2.x",
-    "browserify": "~0.0.0",
-    "watchify": "~0.0.0",
-    "phantomjs": "~0.0.0",
-    "polpetta": "~0.3.x"
+    "uglify-js": "1",
+    "jshint": "2",
+    "browserify": "*",
+    "watchify": "*",
+    "phantomjs": "*",
+    "polpetta": "*"
   },
   "devDependencies": {
-    "wru": "~0.2.x"
+    "wru": "*"
   }
 }
