@@ -31,7 +31,7 @@ REPO_NAME_LENGTH=$(printf "%${#repo}s")
 echo "${repo}
 ${REPO_NAME_LENGTH// /=}
 
-[![build status](https://secure.travis-ci.org/${name}/${repo}.png)](http://travis-ci.org/${name}/${repo})
+[![build status](https://secure.travis-ci.org/${name}/${repo}.svg)](http://travis-ci.org/${name}/${repo})
 " >README.md
 TEST=`cat test/main.js`
 echo "${TEST//main.node.js/${repo}.node.js}" >test/${repo}.js
